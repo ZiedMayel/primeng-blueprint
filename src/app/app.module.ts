@@ -3,27 +3,22 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
-import { AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
-import { AppTopBarComponent } from './app.topbar.component';
-import { AppFooterComponent } from './app.footer.component';
 import { DashboardComponent } from './pages/dashboard.component';
-import { ScrollPanelModule } from 'primeng/scrollpanel';
-import { ButtonModule } from 'primeng/button';
+import { SharedModule } from './shared/shared.module';
+import { LayoutModule } from './shared/layout/layout.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     imports: [
+        CommonModule,
         BrowserModule,
         BrowserAnimationsModule,
+        SharedModule,
+        LayoutModule,
         AppRoutes,
-        ScrollPanelModule,
-        ButtonModule
     ],
     declarations: [
         AppComponent,
-        AppMenuComponent,
-        AppSubMenuComponent,
-        AppTopBarComponent,
-        AppFooterComponent,
         DashboardComponent
     ],
     providers: [],
