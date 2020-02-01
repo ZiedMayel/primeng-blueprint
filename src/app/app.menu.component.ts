@@ -1,7 +1,9 @@
 import { Component, Input, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MenuItem, ScrollPanel } from 'primeng/primeng';
+
 import { AppComponent } from './app.component';
+import { ScrollPanel } from 'primeng/scrollpanel';
+import { MenuItem } from 'primeng/primeng';
 
 @Component({
     selector: 'app-menu',
@@ -11,7 +13,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     model: any[];
 
-    @ViewChild('scrollPanel') layoutMenuScrollerViewChild: ScrollPanel;
+    @ViewChild('scrollPanel', { static: true }) layoutMenuScrollerViewChild: ScrollPanel;
 
     constructor(public app: AppComponent) { }
 
@@ -117,7 +119,7 @@ export class AppSubMenuComponent {
 
     constructor(public app: AppComponent, public appMenu: AppMenuComponent) { }
 
-    itemClick(event: Event, item: MenuItem, index: number)  {
+    itemClick(event: Event, item: MenuItem, index: number) {
         // avoid processing disabled items
         if (item.disabled) {
             event.preventDefault();
