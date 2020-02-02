@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import { SidebarSubMenuComponent } from './sidebar/sidebar.submenu.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
@@ -20,8 +21,8 @@ import { SidebarSubMenuComponent } from './sidebar/sidebar.submenu.component';
         ScrollPanelModule,
         ButtonModule
     ],
-    exports: [AppTopBarComponent, SidebarComponent, SidebarSubMenuComponent, AppFooterComponent],
-    declarations: [AppTopBarComponent, SidebarComponent, SidebarSubMenuComponent, AppFooterComponent],
+    exports: [AppTopBarComponent, SidebarComponent, SidebarSubMenuComponent, AppFooterComponent, MainComponent],
+    declarations: [AppTopBarComponent, SidebarComponent, SidebarSubMenuComponent, AppFooterComponent, MainComponent],
     providers: [SidebarComponent],
 })
 export class LayoutModule { }

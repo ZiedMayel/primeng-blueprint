@@ -7,10 +7,5 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 })
 export class AppTopBarComponent {
 
-    constructor(private sidebar: SidebarComponent) { }
-
-    onMenuButtonClick(event: Event) {
-
-        this.sidebar.changeState(event);
-    }
+    constructor(public sidebar: SidebarComponent) { }
 }

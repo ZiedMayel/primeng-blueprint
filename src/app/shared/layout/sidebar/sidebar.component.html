@@ -1,4 +1,4 @@
-<div class="layout-sidebar" [ngClass]="{'layout-sidebar-active': sidebarActive}">
+<div class="layout-sidebar" [ngClass]="{'layout-sidebar-active': sidebarActive==true}">
 
     <p-scrollPanel #scrollPanel [style]="{height: '100%'}">
         <ul app-submenu [item]="model" root="true" class="layout-menu"></ul>

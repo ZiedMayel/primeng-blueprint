@@ -4,84 +4,12 @@ import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './app.component.html'
+    template: '<router-outlet></router-outlet>'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-    model: any[];
-    sidebarActive: boolean;
+    title = 'NG APP';
 
-    constructor(public sidebar: SidebarComponent) {
-    }
+    constructor() { }
 
-    ngOnInit(): void {
-        this.model = [
-            { label: 'Dashboard', routerLink: ['/'] },
-            {
-                label: 'Menu Hierarchy',
-                items: [
-                    {
-                        label: 'Submenu 1',
-                        items: [
-                            {
-                                label: 'Submenu 1.1',
-                                items: [
-                                    { label: 'Submenu 1.1.1' },
-                                    { label: 'Submenu 1.1.2' },
-                                    { label: 'Submenu 1.1.3' },
-                                ]
-                            },
-                            {
-                                label: 'Submenu 1.2',
-                                items: [
-                                    { label: 'Submenu 1.2.1' },
-                                    { label: 'Submenu 1.2.2' }
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        label: 'Submenu 2',
-                        items: [
-                            {
-                                label: 'Submenu 2.1',
-                                items: [
-                                    { label: 'Submenu 2.1.1' },
-                                    { label: 'Submenu 2.1.2' },
-                                    { label: 'Submenu 2.1.3' }
-                                ]
-                            },
-                            {
-                                label: 'Submenu 2.2',
-                                items: [
-                                    { label: 'Submenu 2.2.1' },
-                                    { label: 'Submenu 2.2.2' }
-                                ]
-                            },
-                        ]
-                    },
-                    {
-                        label: 'Submenu 3',
-                        items: [
-                            {
-                                label: 'Submenu 2.1',
-                                items: [
-                                    { label: 'Submenu 2.1.1', routerLink: ['/sub29'] },
-                                    { label: 'Submenu 2.1.2' },
-                                    { label: 'Submenu 2.1.3' }
-                                ]
-                            },
-                            {
-                                label: 'Submenu 2.2',
-                                items: [
-                                    { label: 'Submenu 2.2.1' },
-                                    { label: 'Submenu 2.2.2' }
-                                ]
-                            },
-                        ]
-                    }
-                ]
-            }
-        ];
-    }
 }

@@ -47,7 +47,7 @@ export class SidebarSubMenuComponent {
 
     hover: boolean;
 
-    constructor(public appMenu: SidebarComponent) { }
+    constructor(public sidebar: SidebarComponent) { }
 
     itemClick(event: Event, item: MenuItem, index: number) {
         // avoid processing disabled items
@@ -69,14 +69,14 @@ export class SidebarSubMenuComponent {
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
             setTimeout(() => {
-                this.appMenu.layoutMenuScrollerViewChild.moveBar();
+                this.sidebar.layoutMenuScrollerViewChild.moveBar();
             }, 450);
             event.preventDefault();
         }
 
         // hide menu
         if (!item.items) {
-            // this.appMenu.sidebarActive = false;
+            // this.sidebar.sidebarActive = false;
         }
     }
 
