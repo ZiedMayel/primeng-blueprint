@@ -4,9 +4,9 @@ import { ScrollPanel } from 'primeng/scrollpanel';
 
 @Component({
     selector: 'app-menu',
-    templateUrl: './app.menu.component.html'
+    templateUrl: './sidebar.component.html'
 })
-export class AppMenuComponent implements OnInit, AfterViewInit, OnChanges {
+export class SidebarComponent implements OnInit, AfterViewInit, OnChanges {
 
     @Input()
     model: any[];

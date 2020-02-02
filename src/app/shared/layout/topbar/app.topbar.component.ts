@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AppMenuComponent } from '../sidebar/app.menu.component';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
     selector: 'app-topbar',
@@ -7,7 +7,7 @@ import { AppMenuComponent } from '../sidebar/app.menu.component';
 })
 export class AppTopBarComponent {
 
-    constructor(private sidebar: AppMenuComponent) { }
+    constructor(private sidebar: SidebarComponent) { }
 
     onMenuButtonClick(event: Event) {
 

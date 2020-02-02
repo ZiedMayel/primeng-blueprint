@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { MenuItem } from 'primeng/primeng';
-import { AppMenuComponent } from './app.menu.component';
+import { SidebarComponent } from './sidebar.component';
 
 @Component({
     /* tslint:disable:component-selector */
@@ -37,7 +37,7 @@ import { AppMenuComponent } from './app.menu.component';
         ])
     ]
 })
-export class AppSubMenuComponent {
+export class SidebarSubMenuComponent {
 
     @Input() item: MenuItem;
 
@@ -47,7 +47,7 @@ export class AppSubMenuComponent {
 
     hover: boolean;
 
-    constructor(public appMenu: AppMenuComponent) { }
+    constructor(public appMenu: SidebarComponent) { }
 
     itemClick(event: Event, item: MenuItem, index: number) {
         // avoid processing disabled items

@@ -1,6 +1,6 @@
 import { Component, Renderer, NgZone, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { AppMenuComponent } from './shared/layout/sidebar/app.menu.component';
+import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 
 @Component({
     selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
     model: any[];
     sidebarActive: boolean;
 
-    constructor(public sidebar: AppMenuComponent) {
+    constructor(public sidebar: SidebarComponent) {
     }
 
     ngOnInit(): void {
