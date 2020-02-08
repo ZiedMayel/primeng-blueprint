@@ -6,7 +6,7 @@
         }
 
         .layout-sidebar-active {
-            padding-left: 250px;
+            padding-left: 240px;
         }
 
         .layout-main-mask {
@@ -14,6 +14,8 @@
         }
 
         .layout-footer {
+            position: fixed;
+            bottom: 0;
             width: 100%;
             padding: 1em 1.5em;
             background-color: $footerBgColor;
