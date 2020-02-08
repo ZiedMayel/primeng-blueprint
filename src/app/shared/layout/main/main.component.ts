@@ -23,6 +23,7 @@ export class MainComponent implements OnInit {
     ngOnInit(): void {
         this.model = [
             { label: 'Dashboard', routerLink: ['/'] },
+            { label: 'Users', routerLink: ['/users'] },
             {
                 label: 'Menu Hierarchy',
                 items: [
