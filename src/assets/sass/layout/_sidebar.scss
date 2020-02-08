@@ -6,7 +6,7 @@
         top: 64px;
         left: -240px;
         z-index: 999;
-        border-right: 2px dotted $sidebarBorderColor;
+        border-right: 1px solid $sidebarBorderColor;
         @include transition(left $sidebarAnimationDuration);
 
         .ui-scrollpanel {
@@ -36,8 +36,9 @@
                     display: block;
                     padding: .5em 1em;
                     position: relative;
+                    color: #fff;
 
-                    > .menuitem-text {
+                    >.menuitem-text {
                         display: inline-block;
                         word-break: break-all;
                     }
@@ -51,7 +52,7 @@
                 }
 
                 &.active-menuitem {
-                    > a {
+                    >a {
                         .layout-submenu-toggler {
                             -webkit-transform: rotate(-180deg);
                             -moz-transform: rotate(-180deg);

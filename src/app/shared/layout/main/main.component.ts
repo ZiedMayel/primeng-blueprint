@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
@@ -13,6 +13,11 @@ export class MainComponent implements OnInit {
     constructor(public sidebar: SidebarComponent) {
 
         this.sidebarActive = true;
+
+        sidebar.openClose.subscribe(event => {
+            this.sidebarActive = event;
+        });
+
     }
 
     ngOnInit(): void {
@@ -84,10 +89,5 @@ export class MainComponent implements OnInit {
                 ]
             }
         ];
-    }
-
-    openHide() {
-
-        console.log('App Compnent');
     }
 }

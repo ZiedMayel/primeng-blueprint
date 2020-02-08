@@ -2,7 +2,7 @@
     .layout-topbar {
         height: 64px;
         background-color: $topbarBgColor;
-        border-bottom: 2px dotted $topbarBorderColor;
+        border-bottom: 2px solid $topbarBorderColor;
         padding: 1em;
         position: fixed;
         width: 100%;
@@ -55,7 +55,7 @@
                 .ui-button-icon-right {
                     right: 50%;
                     margin-right: -.6em;
-                }  
+                }
             }
         }
     }

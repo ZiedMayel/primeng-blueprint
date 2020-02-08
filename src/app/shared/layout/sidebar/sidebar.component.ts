@@ -1,10 +1,11 @@
 import { Component, Input, OnInit, AfterViewInit, ViewChild, Output, EventEmitter } from '@angular/core';
 
 import { ScrollPanel } from 'primeng/scrollpanel';
+import { MainComponent } from '../main/main.component';
 
 @Component({
     selector: 'app-menu',
-    templateUrl: './sidebar.component.html'
+    templateUrl: './sidebar.component.html',
 })
 export class SidebarComponent implements OnInit, AfterViewInit {
 
@@ -14,12 +15,13 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     @Input()
     sidebarActive: boolean;
 
-
-
+    @Output()
+    openClose = new EventEmitter();
 
     @ViewChild('scrollPanel', { static: true }) layoutMenuScrollerViewChild: ScrollPanel;
 
     constructor() {
+        this.sidebarActive = true;
     }
 
     ngAfterViewInit() {
@@ -33,8 +35,8 @@ export class SidebarComponent implements OnInit, AfterViewInit {
     changeState(event: Event) {
 
         this.sidebarActive = !this.sidebarActive;
-        console.log(event);
-        console.log(this.sidebarActive);
+
+        this.openClose.emit(this.sidebarActive);
     }
 }
 
